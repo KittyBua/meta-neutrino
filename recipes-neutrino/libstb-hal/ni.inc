@@ -9,5 +9,6 @@ PV = "${FLAVOUR}-git${SRCPV}"
 EXTRA_OECONF_append += " \
 			--with-boxtype=${TARGET_ARCH}box \
 			--with-boxmodel=${MACHINE} \
-			--with-targetroot=/usr \
+			--with-targetroot= \
+			--with-targetprefix= /usr \
 "
