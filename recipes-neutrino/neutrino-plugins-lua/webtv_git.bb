@@ -46,4 +46,5 @@ do_install () {
 	# Install content from source directory into target.
 	install -d ${D}${N_WEBTV_DIR}
 	install -m 644 ${S}/* ${D}${N_WEBTV_DIR}
+	rm ${D}${N_WEBTV_DIR}/filmon*.*
 }
