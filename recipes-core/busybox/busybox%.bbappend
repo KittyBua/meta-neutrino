@@ -1,5 +1,10 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
+PV = "1.32.1"
+
+SRC_URI[tarball.md5sum] = "6273c550ab6a32e8ff545e00e831efc5"
+SRC_URI[tarball.sha256sum] = "9d57c4bd33974140fd4111260468af22856f12f5b5ef7c70c8d9b75c712a0dee"
+
 SYSTEMD_SERVICE_${PN} = "telnet.service"
 
 SRC_URI_append += "file://telnet.service \
