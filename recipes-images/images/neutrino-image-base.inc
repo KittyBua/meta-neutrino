@@ -107,6 +107,10 @@ set_image_version () {
 		sed -i -e "s|@build-dirname@|${BUILD_DIR}|g" "${RELEASE_TEXT_LOCATION_FILE}"
 	fi
 
+	# Formally synchronize the generation of the 'imageversion' file with the release text file (e.g., 'beta.txt'),
+	# which indicates the latest created image version.
+	echo ${IMAGE_NAME} > ${DEPLOY_DIR_IMAGE}/imageversion
+
 	# Create content for update.urls file and save it into rootfs
 	UPDATE_URL_FILES=$(find ${DEPLOY_DIR_IMAGE} -type f -name "*.txt" -exec basename {} \; | sed 's|^|${IMAGE_LOCATION_URL}/|')
 	echo "${UPDATE_URL_FILES}" > ${IMAGE_ROOTFS_ETC_DIR}/update.urls
