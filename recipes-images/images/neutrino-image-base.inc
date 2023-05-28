@@ -213,6 +213,7 @@ PLUGIN_INSTALL = " \
 	input \
 	msgbox \
 	shellexec \
+	sysinfo \
 	tuxcom \
 "
 
