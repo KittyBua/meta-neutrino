@@ -31,9 +31,9 @@ ROOTFS_POSTPROCESS_COMMAND += "set_image_version; "
 # required by neutrino itself.
 set_image_version () {
 	META_NAME="meta-neutrino"
-	META_VERSION=$(git -C ${COREBASE}/$META_NAME rev-list --count $(git -C ${COREBASE}/$META_NAME branch --show-current))
+	META_VERSION=$(git -C ${COREBASE}/${META_NAME} rev-list --count $(git -C ${COREBASE}/${META_NAME} branch --show-current))
 	RELEASE_NAME="${IMAGE_BASENAME}"
-	RELEASE_NAME_DISCRIBE=`git -C ${COREBASE}/$META_NAME  describe --always --tags --dirty`
+	RELEASE_NAME_DISCRIBE=$(git -C ${COREBASE}/${META_NAME}  describe --always --tags --dirty)
 
 	RELEASE_STATE="3"
 	if [ "${DISTRO_TYPE}" == "release" ]; then
