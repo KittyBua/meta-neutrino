@@ -289,6 +289,7 @@ IMAGE_INSTALL += " \
 EXTRA_IMAGEDEPENDS = " \
 	lshw \
 	samba \
+	sysstat \
 	webmin \
 	\
 	browser \
