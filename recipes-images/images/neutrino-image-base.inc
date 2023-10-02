@@ -128,7 +128,7 @@ prepare_update_list_file () {
 		CHECKSUM=$(md5sum ${IMAGEFILE} | awk '{ print $1 }')
 		sed -i -e "s|MD5|${CHECKSUM}|" "${RELEASE_TEXT_LOCATION_FILE}"
 	else
-		bbwarn  "[${IMAGEFILE}] is not available or already built with last image and is up to date!"
+		bbnote  "[${IMAGEFILE}] is not available or already built with last image build and is up to date!"
 	fi
 }
 
